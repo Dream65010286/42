@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+}
+
+#container{
+    min-height: 10vh;
+    width: 10%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

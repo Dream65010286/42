@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ballon</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+	        height: 100vh;
+	        align-items: center;
+	        justify-content: center;
+	        background-color: rgb(238, 237, 235);
+        }
+
+        #ballon {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: red;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous">
+        </script>
+</head>
+
+<body>
+    <div id="ballon" onclick="handleClick()" onmouseover="handleOver()" onmouseleave="handleOver()"></div>
+</body>
+<script>
+    let size = 200
+    let i = 0
+    const color = ["red", "green", "blue"]
+    $(document).ready(() => {
+        $("#ballon").click(() => {
+            size += 10;
+            i += 1
+            if (size > 420) {
+                size = 200
+            }
+            if (i > 2) {
+                i = 0
+            }
+            $("#ballon").css("width", size + "px")
+            $("#ballon").css("height", size + "px")
+            $("#ballon").css("background-color", color[i])
+        })
+        $("#ballon").mouseover(() => {
+            size -=5;
+            i -= 1;
+            if (size < 200) {
+                size = 200
+            }
+            if (i < 0) {
+                i = 2
+            }
+            $("#ballon").css("width", size + "px")
+            $("#ballon").css("height", size + "px")
+            $("#ballon").css("background-color", color[i])
+        })
+        $("#ballon").mouseleave(() => {
+            size -=5;
+            i -= 1;
+            if (size < 200) {
+                size = 200
+            }
+            if (i < 0) {
+                i = 2
+            }
+            $("#ballon").css("width", size + "px")
+            $("#ballon").css("height", size + "px")
+            $("#ballon").css("background-color", color[i])
+        })
+    })
+</script>
+
+</html>

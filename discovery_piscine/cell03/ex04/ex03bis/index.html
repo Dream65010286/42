@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+  <style>
+    body{
+        background-color: black;
+        padding: 5px;
+        margin-bottom: 5px;
+        background-color: pink;
+        cursor: pointer;
+        border-radius: 16px;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        color: white;
+    }
+    .task{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #ft_list{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 3%;
+        width: 30%;
+        align-items: center;
+    }
+    span{
+        margin: 10px;
+    }
+    .each_todo{
+        margin: 10px;
+        padding: 15px;
+        font-size: 25px;
+        border-style: double;
+        border-radius: 5px;
+        background-color: mediumvioletred;
+        border-radius: 55px;
+    }
+  </style>
+</head>
+<body>
+  <div class="task">
+    <h1>TODO LIST</h1>
+    <span>
+      <button id="New">New</button>
+    </span>
+    <div id="ft_list">
+    </div>
+  </div>
+  <script src="todo.js"></script>
+</body>
+</html>
